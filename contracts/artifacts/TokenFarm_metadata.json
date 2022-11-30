@@ -6,79 +6,35 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "contract StellarToken",
+						"name": "_stellarToken",
+						"type": "address"
+					},
+					{
+						"internalType": "contract JamToken",
+						"name": "_jamToken",
+						"type": "address"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_spender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "Transfer",
-				"type": "event"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
 						"name": "",
 						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
-				"name": "allowance",
+				"name": "hasStaked",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -88,40 +44,16 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_spender",
+						"name": "",
 						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
 					}
 				],
-				"name": "approve",
+				"name": "isStaking",
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -129,12 +61,19 @@
 			},
 			{
 				"inputs": [],
-				"name": "decimal",
+				"name": "issueTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "jamToken",
 				"outputs": [
 					{
-						"internalType": "uint8",
+						"internalType": "contract JamToken",
 						"name": "",
-						"type": "uint8"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -155,12 +94,63 @@
 			},
 			{
 				"inputs": [],
-				"name": "symbol",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					}
+				],
+				"name": "stakeTokens",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "stakers",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "stakingBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -168,67 +158,21 @@
 			},
 			{
 				"inputs": [],
-				"name": "totalSupply",
+				"name": "stellarToken",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "contract StellarToken",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "transfer",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "success",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "_to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_value",
-						"type": "uint256"
-					}
-				],
-				"name": "transferFrom",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "success",
-						"type": "bool"
-					}
-				],
+				"inputs": [],
+				"name": "unstakeTokens",
+				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -246,7 +190,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/JamToken.sol": "JamToken"
+			"contracts/TokenFarm.sol": "TokenFarm"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -266,6 +210,22 @@
 			"urls": [
 				"bzz-raw://a04e4cdb79d789139537343f1a59f4a9b8e46e1d128986a7722d957916235cdf",
 				"dweb:/ipfs/QmZ2332CjEwq5b5pesa4EeJjLuQPvqw9wXfKd9psaHVY3U"
+			]
+		},
+		"contracts/StellarToken.sol": {
+			"keccak256": "0xa77275caf149b1a76e6b8e8f40f84ffa348e49e47ceed1ac62a5ae05a9bc1412",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1eab049bb113e47b489f40ec1e8b335133974eab03fbb0294f55ad35cbbd2fb1",
+				"dweb:/ipfs/Qmc2La8mS75C4fMoJQ9MpQugUg1AqppiRFjqNmxbqrVQ2z"
+			]
+		},
+		"contracts/TokenFarm.sol": {
+			"keccak256": "0x066a88e591b3129bd83ea150aca236345fb1b8cba7892ba3cc7f6468012addf5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8fc360de530f78b16d27bd18f0efe91e0eecd06d237c6ff63afc649192b06eaa",
+				"dweb:/ipfs/QmbaUExC3bYnkKDp64Jd4VgpyLeEjeGm28Ckjgpo52u6fL"
 			]
 		}
 	},

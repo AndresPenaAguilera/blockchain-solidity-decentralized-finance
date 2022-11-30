@@ -246,7 +246,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/JamToken.sol": "JamToken"
+			"contracts/StellarToken.sol": "StellarToken"
 		},
 		"evmVersion": "istanbul",
 		"libraries": {},
@@ -260,12 +260,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/JamToken.sol": {
-			"keccak256": "0xf67e08c8c0068104693055a147fae21eab977620a990439bf3e0c328922a588a",
+		"contracts/StellarToken.sol": {
+			"keccak256": "0xa77275caf149b1a76e6b8e8f40f84ffa348e49e47ceed1ac62a5ae05a9bc1412",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a04e4cdb79d789139537343f1a59f4a9b8e46e1d128986a7722d957916235cdf",
-				"dweb:/ipfs/QmZ2332CjEwq5b5pesa4EeJjLuQPvqw9wXfKd9psaHVY3U"
+				"bzz-raw://1eab049bb113e47b489f40ec1e8b335133974eab03fbb0294f55ad35cbbd2fb1",
+				"dweb:/ipfs/Qmc2La8mS75C4fMoJQ9MpQugUg1AqppiRFjqNmxbqrVQ2z"
 			]
 		}
 	},
